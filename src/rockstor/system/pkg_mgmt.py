@@ -107,7 +107,7 @@ def rpm_build_info(pkg):
     date = None
 
     if pkg_infos(pkg, tag='NAME') != pkg:
-        logger.info('No "rockstor" package found: source install?')
+        logger.info('No "{}" package found: source install?'.format(pkg))
         return version, date
 
     buildtime_str = pkg_infos(pkg, tag='BUILDTIME')
